@@ -1,8 +1,39 @@
 @import 'common'
-
-html
-    font-size 62.5%
+@import 'nib'
 
 body
-    color #333
-    font 1.2em Helvetica, Arial
+    background linear-gradient(top, 70% #D4ECFA, #8ABFDD)
+    min-height 1000px
+
+header
+    background #333
+    height 200px
+    width 100%
+    padding-top 30px
+    margin-bottom 20px
+    h1
+        font-size 42px
+        color: #999
+        text-shadow 1px 1px #EEE
+
+img
+    width 800px
+    margin 25px auto
+    border-radius 10px
+
+.container
+    width 800px
+
+.blue
+    color #4CBCFC
+    text-shadow 1px 1px lighten(#4CBCFC, 20%), 1px 1px lighten(#4CBCFC, 40%)
+
+.pink
+    color #F3ACED
+    text-shadow 1px 1px lighten(#F3ACED, 20%), 2px 2px lighten(#F3ACED, 40%)
+
+.yellow
+    color yellow
+
+.main h1
+    padding-bottom 20px
