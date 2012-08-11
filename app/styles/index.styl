@@ -1,39 +1,76 @@
 @import 'common'
 @import 'nib'
 
-body
-    background linear-gradient(top, 70% #D4ECFA, #8ABFDD)
-    min-height 1000px
-
+// Background credited to:
+// Jen Furlotte
+// http://www.pixelsandicecream.com
+// jennifer@pixelsandicecream.com
+// body
+//     background linear-gradient(top, 70% #D4ECFA, #8ABFDD)
+//     // background url("/img/bg.png")
+//     min-height 1000px
 header
-    background #333
-    height 200px
-    width 100%
-    padding-top 30px
-    margin-bottom 20px
-    h1
-        font-size 42px
-        color: #999
-        text-shadow 1px 1px #EEE
+    margin-top 10px
+    margin-bottom 15px
 
-img
-    width 800px
-    margin 25px auto
-    border-radius 10px
+.header-text
+    width 320px
+    margin-right 20px
+    float left
+    p
+        height 100px
+        text-align right
+        font-size 60px
+        font-weight 100
 
-.container
-    width 800px
+header > img
+    float left
 
-.blue
-    color #4CBCFC
-    text-shadow 1px 1px lighten(#4CBCFC, 20%), 1px 1px lighten(#4CBCFC, 40%)
+ul.nav
+    padding 0px
+    margin-bottom 0px
+    li.active a
+        background-color hsla(33, 22%, 75%, 1.0)
 
-.pink
-    color #F3ACED
-    text-shadow 1px 1px lighten(#F3ACED, 20%), 2px 2px lighten(#F3ACED, 40%)
+.main
+    border-right 1px solid #DDD
+    border-left 1px solid #DDD
+    border-bottom 1px solid #DDD
+    margin 0px
+    padding 15px
+    background hsla(33, 22%, 75%, 1.0)
 
-.yellow
-    color yellow
+blockquote
+    p
+        font-size 46px
+        line-height 48px
+        font-weight 100
+    small
+        font-size 20px
+        line-height 22px
+        color #666666
 
-.main h1
-    padding-bottom 20px
+// header
+//     background #333
+//     height 200px
+//     width 100%
+//     padding-top 30px
+//     margin-bottom 20px
+//     h1
+//         font-size 42px
+//         color: #999
+//         text-shadow 1px 1px #EEE
+
+// img
+//     width 800px
+//     margin 25px auto
+//     border-radius 10px
+
+// .container
+//     width 800px
+
+// .yellow
+//     color yellow
+
+// .main h1
+//     padding-bottom 20px

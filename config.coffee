@@ -21,6 +21,6 @@ exports.config =
       defaultExtension: 'styl'
       joinTo: 'stylesheets/app.css'
       order:
-        before: ['vendor/styles/bootstrap-responsive.min.css']
+        before: ['vendor/styles/bootstrap.min.css']
         after: ['vendor/styles/helpers.css']
 
