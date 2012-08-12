@@ -1,14 +1,8 @@
 @import 'common'
 @import 'nib'
 
-// Background credited to:
-// Jen Furlotte
-// http://www.pixelsandicecream.com
-// jennifer@pixelsandicecream.com
-// body
-//     background linear-gradient(top, 70% #D4ECFA, #8ABFDD)
-//     // background url("/img/bg.png")
-//     min-height 1000px
+taupe = #CDC1B1
+
 header
     margin-top 10px
     margin-bottom 15px
@@ -29,18 +23,28 @@ header > img
 ul.nav
     padding 0px
     margin-bottom 0px
-    li.active a
-        background-color hsla(33, 22%, 75%, 1.0)
+    li
+        a
+            color #888888
+        a:hover
+            background-color lighten(taupe, 40%)
+        &.active a, &.active a:hover
+            background-color taupe
+            color darken(taupe, 50%)
 
 .main
+    border-bottom-right-radius 10px
+    border-bottom-left-radius 10px
+    border-top-right-radius 10px
     border-right 1px solid #DDD
     border-left 1px solid #DDD
     border-bottom 1px solid #DDD
     margin 0px
-    padding 15px
-    background hsla(33, 22%, 75%, 1.0)
+    padding 20px
+    background taupe
 
 blockquote
+    margin-top 35px
     p
         font-size 46px
         line-height 48px
@@ -50,27 +54,10 @@ blockquote
         line-height 22px
         color #666666
 
-// header
-//     background #333
-//     height 200px
-//     width 100%
-//     padding-top 30px
-//     margin-bottom 20px
-//     h1
-//         font-size 42px
-//         color: #999
-//         text-shadow 1px 1px #EEE
-
-// img
-//     width 800px
-//     margin 25px auto
-//     border-radius 10px
-
-// .container
-//     width 800px
-
-// .yellow
-//     color yellow
-
-// .main h1
-//     padding-bottom 20px
+footer
+    margin-top 10px
+    font-size 14px
+    text-align right
+    a, a:hover, a:visited
+        color: #2D81C5
+        text-decoration none
