@@ -9,14 +9,18 @@ class App extends Spine.Controller
 
   constructor: ->
     super
-    @currentTab = $("a[href=#about-us]").parent()
+    @currentTab = $("li[data-content=#{window.location.hash || '#about-us'}]")
+    @currentTab.addClass "active"
+    $(@currentTab.data("content")).fadeIn 'slow'
 
   switchFocus: (e) ->
     e.preventDefault()
     selectedTab = $(e.target.parentElement)
     unless selectedTab is @currentTab
       @currentTab.removeClass "active"
-      $(selectedTab).addClass "active"
+      selectedTab.addClass "active"
+      $(@currentTab.data("content")).fadeOut 'slow', ->
+        $(selectedTab.data("content")).fadeIn 'slow'
       @currentTab = selectedTab
 
 module.exports = App
