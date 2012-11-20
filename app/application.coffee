@@ -1,26 +1,34 @@
+AboutUs = require('controllers/about_us')
+WeddingInfo = require('controllers/wedding_info')
+Vendors = require('controllers/vendor')
+Trans = require('controllers/trans')
+Contact = require('controllers/contact')
 
 class App extends Spine.Controller
-  element:
+  elements:
     ".main": "main"
-    "#about-us": "aboutUs"
+    "#count": "count"
 
   events:
     "click .nav a": "switchFocus"
 
   constructor: ->
     super
-    @currentTab = $("li[data-content=#{window.location.hash || '#about-us'}]")
-    @currentTab.addClass "active"
-    $(@currentTab.data("content")).fadeIn 'slow'
+
+    @controllers =
+      'about-us': new AboutUs
+      'wedding-info': new WeddingInfo
+      'vendors': new Vendors
+      'trans': new Trans
+      'contact': new Contact
+
+    new Spine.Manager((for key, controller of @controllers
+      controller)...)
+
+    @controllers['about-us'].active()
 
   switchFocus: (e) ->
     e.preventDefault()
-    selectedTab = $(e.target.parentElement)
-    unless selectedTab is @currentTab
-      @currentTab.removeClass "active"
-      selectedTab.addClass "active"
-      $(@currentTab.data("content")).fadeOut 'slow', ->
-        $(selectedTab.data("content")).fadeIn 'slow'
-      @currentTab = selectedTab
+    @controllers[$(e.target.parentElement).data('content')].active()
 
 module.exports = App
