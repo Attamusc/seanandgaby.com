@@ -5046,29 +5046,44 @@ table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
-header {
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-.header-text {
-  width: 320px;
-  margin-right: 20px;
-  float: left;
-}
-.header-text p {
-  height: 100px;
-  text-align: right;
-  font-size: 60px;
+#count {
+  color: #f00;
   font-weight: 100;
 }
-header > img {
-  float: left;
+header {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+header img {
+  position: relative;
+  top: 4px;
+}
+.header-text p {
+  text-align: right;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 100;
+  margin: 0;
+}
+.header-text p:first-child {
+  margin-bottom: 40px;
+}
+.header-text p:last-child {
+  margin-top: 40px;
 }
 ul.nav {
-  padding: 0px;
-  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 754px;
+  padding: 0;
+  margin-bottom: 0;
+}
+ul.nav li {
+  font-size: 20px;
+  font-weight: 300;
 }
 ul.nav li a {
+  padding: 15px 30px;
   color: #888;
 }
 ul.nav li a:hover {
@@ -5080,21 +5095,38 @@ ul.nav li.active a:hover {
   color: #74624b;
 }
 .main {
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   margin: 0px;
-  padding: 20px;
-  background: #cdc1b1;
+  padding: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #cdc1b1), color-stop(1, #beae9a));
+  background: -webkit-linear-gradient(top, #cdc1b1 0%, #beae9a 100%);
+  background: -moz-linear-gradient(top, #cdc1b1 0%, #beae9a 100%);
+  background: -o-linear-gradient(top, #cdc1b1 0%, #beae9a 100%);
+  background: -ms-linear-gradient(top, #cdc1b1 0%, #beae9a 100%);
+  background: linear-gradient(top, #cdc1b1 0%, #beae9a 100%);
 }
 .main > div {
+  font-size: 18px;
+  font-weight: 300;
+}
+.main > div:not(.active) {
   display: none;
 }
+.main > div h2 {
+  text-align: center;
+  font-weight: 100;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
 blockquote {
-  margin-top: 35px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  border-left: 0 solid #fff;
 }
 blockquote p {
   font-size: 46px;
