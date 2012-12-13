@@ -5046,17 +5046,43 @@ table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+a,
+a:hover,
+a:visited,
+a:active {
+  color: #1438ff;
+  text-decoration: none;
+}
 #count {
   color: #f00;
   font-weight: 100;
 }
-header {
-  margin-top: 30px;
-  margin-bottom: 50px;
+.container > header {
+  margin: 30px auto 50px auto;
+  width: 800px;
+  zoom: 1;
 }
-header img {
+.container > header:before,
+.container > header:after {
+  content: "";
+  display: table;
+}
+.container > header:after {
+  clear: both;
+}
+.container > header img {
   position: relative;
   top: 4px;
+  width: 500px;
+  float: right;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #777;
+}
+.header-text {
+  float: left;
+  margin: 66px 0;
 }
 .header-text p {
   text-align: right;
@@ -5066,15 +5092,15 @@ header img {
   margin: 0;
 }
 .header-text p:first-child {
-  margin-bottom: 40px;
+  margin-bottom: 65px;
 }
 .header-text p:last-child {
-  margin-top: 40px;
+  margin-top: 65px;
 }
 ul.nav {
   margin-left: auto;
   margin-right: auto;
-  width: 754px;
+  width: 619px;
   padding: 0;
   margin-bottom: 0;
 }
@@ -5103,12 +5129,7 @@ ul.nav li.active a:hover {
   border-bottom: 1px solid #ddd;
   margin: 0px;
   padding: 40px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #cdc1b1), color-stop(1, #beae9a));
-  background: -webkit-linear-gradient(top, #cdc1b1 0%, #beae9a 100%);
-  background: -moz-linear-gradient(top, #cdc1b1 0%, #beae9a 100%);
-  background: -o-linear-gradient(top, #cdc1b1 0%, #beae9a 100%);
-  background: -ms-linear-gradient(top, #cdc1b1 0%, #beae9a 100%);
-  background: linear-gradient(top, #cdc1b1 0%, #beae9a 100%);
+  background: #cdc1b1;
 }
 .main > div {
   font-size: 18px;
@@ -5122,6 +5143,94 @@ ul.nav li.active a:hover {
   font-weight: 100;
   font-size: 40px;
   margin-bottom: 30px;
+}
+#wedding-info section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+#wedding-info div {
+  margin-bottom: 30px;
+}
+#wedding-info h1 {
+  font-size: 50px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #af9c82;
+}
+#wedding-info h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+#wedding-info h3 {
+  font-size: 26px;
+  font-weight: 100;
+}
+.address {
+  margin-bottom: 15px;
+}
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+ol li {
+  margin-bottom: 8px;
+  zoom: 1;
+}
+ol li:before,
+ol li:after {
+  content: "";
+  display: table;
+}
+ol li:after {
+  clear: both;
+}
+.directions {
+  width: 600px;
+  margin: 0 auto;
+}
+.directions header {
+  color: #555;
+  text-shadow: 1px 0px #bbb;
+  font-size: 30px;
+}
+.direction {
+  float: left;
+}
+.distance {
+  float: right;
+}
+#contact > p {
+  font-size: 22px;
+  text-align: center;
+}
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 28px;
+  font-weight: 300;
+  zoom: 1;
+}
+.contact-info:before,
+.contact-info:after {
+  content: "";
+  display: table;
+}
+.contact-info:after {
+  clear: both;
+}
+.contact-info p {
+  margin: 0;
+}
+.left {
+  float: left;
+  text-align: center;
+  margin-left: 40px;
+}
+.right {
+  float: right;
+  text-align: center;
+  margin-right: 40px;
 }
 blockquote {
   margin-top: 30px;
