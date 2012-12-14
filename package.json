@@ -25,7 +25,9 @@
     "uglify-js-brunch": "> 1.0 < 1.5",
     "clean-css-brunch": "> 1.0 < 1.5",
     "statik": ">= 1.1.0", 
-    "brunch": ">= 1.0 < 1.5"
+    "brunch": ">= 1.0 < 1.5",
+    "mocha": "0.14.0",
+    "chai": "1.1.x"
   },
   "devDependencies": {
     "mocha": "0.14.0",
