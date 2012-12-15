@@ -45,11 +45,12 @@ a, a:hover, a:visited, a:active
       margin-top 65px
 
 ul.nav
-  margin-left auto
-  margin-right auto
   width 636px
+  position relative
+  top 1px
+  margin 0 auto
+  border-bottom 1px solid #DDDDDD
   padding 0
-  margin-bottom 0
   li
     font-size 20px
     font-weight 300
@@ -58,15 +59,15 @@ ul.nav
       color #777777
     a:hover
       background-color lighten(taupe, 40%)
-    &.active a, &.active a:hover
-      background-color taupe
-      color darken(taupe, 60%)
+    &.active
+      z-index 99
+      & a, & a:hover
+        background-color taupe
+        color darken(taupe, 60%)
 
 .main
   border-radius 10px
-  border-right 1px solid #DDD
-  border-left 1px solid #DDD
-  border-bottom 1px solid #DDD
+  border 1px solid #DDD
   margin 0px
   padding 40px
   background taupe
