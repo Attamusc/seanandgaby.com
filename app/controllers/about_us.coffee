@@ -7,7 +7,7 @@ class AboutUs extends Spine.Controller
 
   constructor: ->
     super
-    @count.html(Math.ceil (new Date('2013-05-25') - new Date()) / (1000*60*60*24))
+    @count.html(Math.ceil (new Date('May 25, 2013 14:00') - new Date()) / (1000*60*60*24))
 
   activate: ->
     $("li[data-content=#{@name}]").addClass "active"
