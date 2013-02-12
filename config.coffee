@@ -22,6 +22,9 @@ exports.config =
       defaultExtension: 'styl'
       joinTo: 'stylesheets/app.css'
       order:
-        before: ['vendor/styles/bootstrap.min.css']
+        before: [
+          'vendor/styles/bootstrap-responsive.css'
+          'vendor/styles/bootstrap.css'
+        ]
         after: ['vendor/styles/helpers.css']
 

@@ -1,6 +1,5 @@
 AboutUs = require('controllers/about_us')
 WeddingInfo = require('controllers/wedding_info')
-Vendors = require('controllers/vendor')
 Trans = require('controllers/trans')
 Contact = require('controllers/contact')
 
@@ -18,14 +17,17 @@ class App extends Spine.Controller
     @controllers =
       'about-us': new AboutUs
       'wedding-info': new WeddingInfo
-      'vendors': new Vendors
       'trans': new Trans
       'contact': new Contact
 
     new Spine.Manager((for key, controller of @controllers
       controller)...)
 
-    @controllers['about-us'].active()
+    hash = window.location.hash.substr(1)
+    if hash and @controllers.hasOwnProperty(hash)
+      @controllers[hash].active()
+    else
+      @controllers['about-us'].active()
 
   switchFocus: (e) ->
     e.preventDefault()
