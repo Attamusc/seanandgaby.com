@@ -1,10 +1,4 @@
-class Trans extends Spine.Controller
-  name: 'trans'
-  el: $('#trans')
-
-  constructor: ->
-    super
-
+class TabController extends Spine.Controller
   activate: ->
     $("li[data-content=#{@name}]").addClass "active"
     @el.addClass "active"
@@ -20,4 +14,4 @@ class Trans extends Spine.Controller
     @el.removeClass "active"
     @
 
-module.exports = Trans
+module.exports = TabController

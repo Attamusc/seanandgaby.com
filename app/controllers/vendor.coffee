@@ -1,18 +1,7 @@
-class Vendors extends Spine.Controller
-  name: 'vendors'
-  el: $('#vendors')
+TabController = require "./tab_controller"
 
-  constructor: ->
-    super
-
-  activate: ->
-    $("li[data-content=#{@name}]").addClass "active"
-    @el.addClass "active"
-    @
-
-  deactivate: ->
-    $("li[data-content=#{@name}]").removeClass "active"
-    @el.removeClass "active"
-    @
+class Vendors extends TabController
+  name: "vendors"
+  el: $ "#vendors"
 
 module.exports = Vendors

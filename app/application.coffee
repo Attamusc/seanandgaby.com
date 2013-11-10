@@ -1,7 +1,7 @@
-AboutUs = require('controllers/about_us')
-WeddingInfo = require('controllers/wedding_info')
-Trans = require('controllers/trans')
-Contact = require('controllers/contact')
+AboutUs = require "controllers/about_us"
+WeddingInfo = require "controllers/wedding_info"
+WeddingPictures = require "controllers/wedding_pictures"
+Contact = require "controllers/contact"
 
 class App extends Spine.Controller
   elements:
@@ -15,10 +15,10 @@ class App extends Spine.Controller
     super
 
     @controllers =
-      'about-us': new AboutUs
-      'wedding-info': new WeddingInfo
-      'trans': new Trans
-      'contact': new Contact
+      "about-us": new AboutUs
+      "wedding-info": new WeddingInfo
+      "wedding-pictures": new WeddingPictures
+      "contact": new Contact
 
     new Spine.Manager((for key, controller of @controllers
       controller)...)
@@ -27,10 +27,12 @@ class App extends Spine.Controller
     if hash and @controllers.hasOwnProperty(hash)
       @controllers[hash].active()
     else
-      @controllers['about-us'].active()
+      @controllers["about-us"].active()
+
+    document.body.scrollTop = 0
 
   switchFocus: (e) ->
     e.preventDefault()
-    @controllers[$(e.target.parentElement).data('content')].active()
+    @controllers[$(e.target.parentElement).data("content")].active()
 
 module.exports = App
